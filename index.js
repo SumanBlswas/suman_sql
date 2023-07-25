@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/blogs", blogRouter);
 
-app.listen(3001, async () => {
+app.listen(80, async () => {
   try {
     await db.sequelize.sync();
     console.log("connected to the server");
