@@ -14,12 +14,11 @@ app.get("/", (req, res) => {
 
 // app.use("/user");
 
-db.sequelize.sync().then(() => {
-  app.listen(3001, async () => {
-    try {
-      console.log("connected to the server");
-    } catch (error) {
-      console.log(error.message);
-    }
-  });
+app.listen(3001, async () => {
+  try {
+    await db.sequelize.sync();
+    console.log("connected to the server");
+  } catch (error) {
+    console.log(error.message);
+  }
 });
