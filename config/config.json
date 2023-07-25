@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Sumanbiswas@123",
-    "database": "database_development",
+    "password": "Sumanbiswas123@",
+    "database": "sumandb1",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Sumanbiswas@123",
+    "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Sumanbiswas@123",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"

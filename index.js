@@ -1,4 +1,5 @@
-import express from "express";
+const express = require("express");
+const db = require("./models/index");
 
 const app = express();
 app.use(express.json());
@@ -11,10 +12,14 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(3001, async () => {
-  try {
-    console.log("connected to the server");
-  } catch (error) {
-    console.log(error.message);
-  }
+// app.use("/user");
+
+db.sequelize.sync().then(() => {
+  app.listen(3001, async () => {
+    try {
+      console.log("connected to the server");
+    } catch (error) {
+      console.log(error.message);
+    }
+  });
 });
