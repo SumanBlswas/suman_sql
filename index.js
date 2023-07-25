@@ -9,11 +9,26 @@ app.get("/", (req, res) => {
   try {
     res.status(200).send({
       EndPoints: [
-        { "For GET": "http://16.171.148.3:3001/blogs" },
-        { "For GET with ID": "http://16.171.148.3:3001/blogs/:id" },
-        { "For POST": "http://16.171.148.3:3001/blogs" },
-        { "For PUT": "http://16.171.148.3:3001/blogs/:id" },
-        { "For DELETE with ID": "http://16.171.148.3:3001/blogs/:id" },
+        {
+          "For GET":
+            "http://ec2-16-171-140-201.eu-north-1.compute.amazonaws.com/blogs",
+        },
+        {
+          "For GET with ID":
+            "http://ec2-16-171-140-201.eu-north-1.compute.amazonaws.com/blogs/:id",
+        },
+        {
+          "For POST":
+            "http://ec2-16-171-140-201.eu-north-1.compute.amazonaws.com/blogs",
+        },
+        {
+          "For PUT":
+            "http://ec2-16-171-140-201.eu-north-1.compute.amazonaws.com/blogs/:id",
+        },
+        {
+          "For DELETE with ID":
+            "http://ec2-16-171-140-201.eu-north-1.compute.amazonaws.com/blogs/:id",
+        },
       ],
     });
   } catch (error) {
