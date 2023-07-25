@@ -1,5 +1,6 @@
 const express = require("express");
-const db = require("./models/index");
+const db = require("./models");
+const blogRouter = require("./routes/blog");
 
 const app = express();
 app.use(express.json());
@@ -12,9 +13,9 @@ app.get("/", (req, res) => {
   }
 });
 
-// app.use("/user");
+app.use("/blogs", blogRouter);
 
-app.listen(3001, async () => {
+app.listen(3000, async () => {
   try {
     await db.sequelize.sync();
     console.log("connected to the server");
